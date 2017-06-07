@@ -32,3 +32,13 @@ Route::get('/pengaturan', function () {
     return $q;
 });
 
+
+Route::get('/test','Mycontroller@percobaan');
+Route::get('/test2','Mycontroller@percobaan2');
+Route::get('/test3','Mycontroller@percobaan3');
+Route::get('/test4','Mycontroller@percobaan4');
+Route::get('/test5','Mycontroller@percobaan5');
+Route::get('/test6','Mycontroller@percobaan6');
+Route::get('/test7','Mycontroller@percobaan7');
+Route::get('user/{buah}','Mycontroller@show');
+
