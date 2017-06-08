@@ -4,9 +4,19 @@
 	<title>looping</title>
 </head>
 <body>
-		@foreach($buah as $data)
-		 {{$data}}<hr>
-		 @endforeach
-
+   <center>
+	<table border="10">
+	   <tr>
+	   	  <td>
+			<center>	   	  
+				<center><h1>Daftar: {{$data}}</h1></center>
+				@foreach($hihi as $data)
+		 		{{$data}}<hr>
+		 		@endforeach
+		    </center>
+		  </td>
+		</tr>
+	 </center>
+   </table>
 </body>
 </html>

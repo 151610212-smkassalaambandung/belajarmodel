@@ -48,10 +48,16 @@ class Mycontroller extends Controller
     	return view('data', compact('buah','hewan','komputer'));
     }
 
-    public function show()
+    public function percobaan8($data,$data2)
     {
-    	$buah=['mangga','jeruk','apel','anggur'];
-    	 return view('buah');
+    	$semua=['buah'=>['mangga','jeruk','apel','anggur'],
+                'hewan'=>['kucing','kelinci','burung','rusa','bebek'],
+                'komputer'=>['assus','samsung','lg','acer','lenovo'],
+                'kucing'=>['anggora','garong']];
+
+        $kiw=$semua[$data];
+        $hihi =$semua[$data2];
+    	 return view('buah', compact('kiw','data'));
     }
 
 
