@@ -9,8 +9,8 @@
 	   <tr>
 	   	  <td>
 			<center>	   	  
-				<center><h1>Daftar: {{$data}}</h1></center>
-				@foreach($hihi as $data)
+				<center><h1>Daftar: {{$data}}{{$data2}}</h1></center>
+				@foreach($query as $data)
 		 		{{$data}}<hr>
 		 		@endforeach
 		    </center>

@@ -40,5 +40,9 @@ Route::get('/test4','Mycontroller@percobaan4');
 Route::get('/test5','Mycontroller@percobaan5');
 Route::get('/test6','Mycontroller@percobaan6');
 Route::get('/test7','Mycontroller@percobaan7');
-Route::get('/loop/{data?}/{data2?}','Mycontroller@percobaan8');
+Route::get('/haha/{data?}/{data2?}','Mycontroller@param');
+
+
+Route::get('/coba', 'SiswaController@percobaan');
+Route::get('/hiha', 'SiswaController@show');
 

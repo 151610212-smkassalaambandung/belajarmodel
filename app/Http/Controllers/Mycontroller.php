@@ -46,18 +46,39 @@ class Mycontroller extends Controller
     	$hewan=['kucing','kelinci','burung','rusa','bebek'];
     	$komputer=['assus','samsung','lg','acer','lenovo'];
     	return view('data', compact('buah','hewan','komputer'));
+
+
+
+
+
+
+
+
+
     }
 
-    public function percobaan8($data,$data2)
+    public function param($data,$data2 =null)
     {
-    	$semua=['buah'=>['mangga','jeruk','apel','anggur'],
-                'hewan'=>['kucing','kelinci','burung','rusa','bebek'],
-                'komputer'=>['assus','samsung','lg','acer','lenovo'],
-                'kucing'=>['anggora','garong']];
+    	$array=array ('buah'     =>['mangga' =>['aromanis','kweni'],
+                                    'jeruk'=>['jeruk bali','jeruk manis'],
+                                    'jambu'=>['jambu air','jambu batu']],
 
-        $kiw=$semua[$data];
-        $hihi =$semua[$data2];
-    	 return view('buah', compact('kiw','data'));
+                      'hewan'    =>['kucing'=>['anggora','persia','garong'],
+                                    'hamster'=>['hamtaro','hamtari'],
+                                    'ayam'=>['ayam kampung','ayam jago']],
+
+  
+                      'komputer' =>['assus'=>['456UR','456'],
+                                   'dell'=>['alienware','inspiron'],
+                                   'acer'=>['6930','5667']]);
+         
+        if ($data){
+            $query=(array_keys($array[$data]));
+        }       
+        if($data2){
+            $query=($array[$data][$data2]);
+        }
+    	 return view('buah', compact('query','data','data2'));
     }
 
 
